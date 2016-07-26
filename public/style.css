@@ -1,0 +1,104 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+nav {
+    margin-bottom: 25px;
+}
+
+.remove {
+    float: right;
+}
+
+.pokemon {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 500px;
+    border: 2px solid black;
+}
+
+.form {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 50px;
+    width: 800px;
+    border: 2px solid black;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*COLORS for TYPES*/
+
+#fire {
+    background-color: #B22222;
+    opacity: .9;
+}
+
+#grass {
+    background-color: #228B22;
+    opacity: .9;
+}
+
+#water {
+    background-color: #00BFFF;
+    opacity: .9;
+}
+
+#flying {
+    background-color: skyblue;
+    opacity: .9;
+}
+
+#rock {
+    background-color: grey;
+    opacity: .9;
+}
+
+#normal {
+    background-color: tan;
+    opacity: .9;
+}
+
+#bug {
+    background-color: #3CB371;
+    opacity: .9;
+}
+
+#electric {
+    background-color: #FFFF00;
+    opacity: .9;
+}
+
+

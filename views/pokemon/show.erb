@@ -1,0 +1,10 @@
+<h1>Pokemon ฅ(ٛ•௰• ٛ )</h1>
+<div class="pokemon" id="<%= @pokemon.poke_type.downcase %>">
+	<h1><%= @pokemon.name %> | CP <%= @pokemon.cp %></h1>
+	<form class="remove" action="/pokemon/<%= @pokemon.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="delete">
+	</form>
+	<h3>TYPE: <%= @pokemon.poke_type %></h3>
+	<img src="<%= @pokemon.img_url %>" width="200px" height="200px">
+</div>
