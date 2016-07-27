@@ -2,6 +2,7 @@ require 'sinatra'
 require 'pg'
 require 'sinatra/reloader'
 require 'active_record'
+require "net/http"
 
 require_relative 'db/connection'
 require_relative 'models/pokemon'
@@ -41,9 +42,7 @@ get '/pokemon/:id/edit' do
 end
 
 post '/pokemon' do
-	if params[:pokemon]["img_url"] == ""
-		params[:pokemon]["img_url"] = "http://orig12.deviantart.net/5374/f/2013/314/8/3/pokemon_silhouette__5___pikachu_by_supersmashremix2375-d6ts8mm.png"
-	end
+	params[:pokemon]["img_url"] = "https://img.pokemondb.net/sprites/black-white/anim/normal/#{params[:pokemon]["name"].downcase}.gif"
 	if params[:pokemon]["name"] == ""
 		params[:pokemon]["name"] = "Unknown"
 	end
