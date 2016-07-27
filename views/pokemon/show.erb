@@ -2,11 +2,12 @@
 <div class="pokemon type-<%= @pokemon.poke_type.downcase %>">
 	<p class="remove"><a href="/pokemon/<%= @pokemon.id %>/edit"><img src="/gear.png" width="40px" height="40px" alt="edit_pokemon"></a></p>
 	<h1><%= @pokemon.name %></h1>
-	<h3>CP <%= @pokemon.cp %></h3>
 	<form class="remove" action="/pokemon/<%= @pokemon.id %>" method="post">
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="delete">
 	</form>
-	<h3>TYPE: <%= @pokemon.poke_type %></h3>
-	<img src="<%= @pokemon.img_url %>" width="100px" height="100px">
+	<span class="type-icon type-<%= @pokemon.poke_type.downcase %>"><%= @pokemon.poke_type %></span>
+	<span>| CP<span id="cp"><%= @pokemon.cp %></span></span>
+	<br>
+	<img class="img" src="<%= @pokemon.img_url %>" width="100px" height="100px">
 </div>
