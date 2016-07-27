@@ -42,7 +42,7 @@ end
 
 post '/pokemon' do
 	if params[:pokemon]["img_url"] == ""
-		params[:pokemon]["img_url"] = "https://s.discogs.com/images/default-release-cd.png"
+		params[:pokemon]["img_url"] = "http://orig12.deviantart.net/5374/f/2013/314/8/3/pokemon_silhouette__5___pikachu_by_supersmashremix2375-d6ts8mm.png"
 	end
 	if params[:pokemon]["name"] == ""
 		params[:pokemon]["name"] = "Unknown"
