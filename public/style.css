@@ -34,16 +34,23 @@ nav {
     margin-bottom: 25px;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .remove {
     float: right;
 }
 
 .pokemon {
     margin: 0 auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     padding: 20px;
-    width: 500px;
+    width: 400px;
     border: 2px solid black;
 }
 
@@ -214,48 +221,6 @@ input:checked + label {
     background-image: -webkit-linear-gradient(#e898e8,#de6ede);
     background-image: linear-gradient(#e898e8,#de6ede);
     border-color: #d547d5;
-}
-
-/*COLORS for TYPES*/
-
-#fire {
-    background-color: #B22222;
-    opacity: .9;
-}
-
-#grass {
-    background-color: #228B22;
-    opacity: .9;
-}
-
-#water {
-    background-color: #00BFFF;
-    opacity: .9;
-}
-
-#flying {
-    background-color: skyblue;
-    opacity: .9;
-}
-
-#rock {
-    background-color: grey;
-    opacity: .9;
-}
-
-#normal {
-    background-color: tan;
-    opacity: .9;
-}
-
-#bug {
-    background-color: #3CB371;
-    opacity: .9;
-}
-
-#electric {
-    background-color: #FFFF00;
-    opacity: .9;
 }
 
 

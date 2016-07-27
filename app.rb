@@ -9,12 +9,12 @@ require_relative 'models/pokemon'
 require_relative 'models/trainer'
 
 get '/' do
-	"hello world"	
+	erb :home
 end
 
 get '/pokemons' do
-	@pokemons = Pokemon.all
-	erb :"pokemon/index"	
+	@pokemons = Pokemon.all.reverse
+	erb :"pokemon/index"
 end
 
 get '/pokemons/by_name' do
@@ -58,6 +58,7 @@ end
 
 put '/pokemon/:id' do
 	pokemon = Pokemon.find(params[:id])
+	params[:pokemon]["img_url"] = "https://img.pokemondb.net/sprites/black-white/anim/normal/#{params[:pokemon]["name"].downcase}.gif"
 	pokemon.update(params[:pokemon])
 	redirect "/pokemon/#{ pokemon.id }"
 end

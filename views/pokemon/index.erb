@@ -1,11 +1,13 @@
 <h1>| Pokemon | <a href="/pokemon/new">+</a> |</h1>
 <h4>Sort by | <a href="/pokemons/by_name">NAME</a> / <a href="/pokemons/by_cp">CP</a></h4>
 <hr>
-<% @pokemons.each do |pokemon| %>
-	<div class="pokemon" id="<%= pokemon.poke_type.downcase %>">
-		<p class="remove"><a href="/pokemon/<%= pokemon.id %>/edit"><img src="/gear.png" width="40px" height="40px" alt="edit_pokemon"></a></p>
-		<h1><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a> | CP <%= pokemon.cp %></h1>
-		<h3>TYPE: <%= pokemon.poke_type %></h3>
-		<img src="<%= pokemon.img_url %>" width="100px" height="100px">
-	</div>
-<% end %>
+<div class="container">
+	<% @pokemons.each do |pokemon| %>
+		<div class="pokemon type-<%= pokemon.poke_type.downcase %>">
+			<p class="remove"><a href="/pokemon/<%= pokemon.id %>/edit"><img src="/gear.png" width="40px" height="40px" alt="edit_pokemon"></a></p>
+			<h1><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a> | CP <%= pokemon.cp %></h1>
+			<h3>TYPE: <%= pokemon.poke_type %></h3>
+			<img src="<%= pokemon.img_url %>" width="100px" height="100px">
+		</div>
+	<% end %>
+</div>
