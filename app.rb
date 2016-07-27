@@ -13,7 +13,7 @@ get '/' do
 end
 
 get '/pokemons' do
-	@pokemons = Pokemon.all.reverse
+	@pokemons = Pokemon.all
 	erb :"pokemon/index"
 end
 
@@ -68,7 +68,6 @@ delete '/pokemon/:id' do
 	pokemon.destroy
 	redirect "/pokemons"
 end
-
 
 
 
