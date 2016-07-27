@@ -1,26 +1,36 @@
 <div class="form">
-	<form action="/pokemon/<%= @pokemon.id %>" method="post">
-		<input type="hidden" name="_method" value="put">
-		<label>
-			Name: <input type="text" name="pokemon[name]" value="<%= @pokemon.name %>"><br>
-		</label>
-		Pokemon TYPE: 
-		<div class="type-wrapper">
-			<% @types.each do |type| %>
-				<label>
-					<input type="radio" <%= @pokemon.poke_type == type ? "checked" : ""  %> name="pokemon[poke_type]" value="<%= type %>"></input>
-					<span class="type-icon type-<%= type.downcase %>"><%= type %></span>
-				</label>
-			<% end %>
-		</div>
-		<label>
-			CP: <input type="text" name="pokemon[cp]" value="<%= @pokemon.cp %>"><br>
-		</label>
-		<input type="submit" value="Update Pokemon">
-	</form>
-
 	<form class="remove" action="/pokemon/<%= @pokemon.id %>" method="post">
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="delete">
+	</form>
+	<form action="/pokemon/<%= @pokemon.id %>" method="post">
+		<input type="hidden" name="_method" value="put">
+		<div class="form-item">
+			<label>
+			Name: <br>
+			<select name="pokemon[name]">
+				<% @pokemons.each do |pokemon| %>
+					<option value="<%= pokemon %>" <%= pokemon == @pokemon.name ? "selected" : ""  %>><%= pokemon.upcase %></option>
+				<% end %>
+			</select>
+			</label>
+		</div>
+		<div class="form-item">
+			Pokemon TYPE: 
+			<div class="type-wrapper">
+				<% @types.each do |type| %>
+					<label>
+					<input type="radio" <%= @pokemon.poke_type == type ? "checked" : ""  %> name="pokemon[poke_type]" value="<%= type %>"></input>
+					<span class="type-icon type-<%= type.downcase %>"><%= type %></span>
+					</label>
+				<% end %>
+			</div>
+		</div>
+		<div class="form-item">
+			<label>
+			CP: <input type="text" name="pokemon[cp]" value="<%= @pokemon.cp %>"><br>
+			</label>
+		</div>
+		<input class="remove" type="submit" value="Update Pokemon">
 	</form>
 </div>

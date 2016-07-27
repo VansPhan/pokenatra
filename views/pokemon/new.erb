@@ -1,14 +1,18 @@
 <div class="form">
 	<form action="/pokemon" method="post">
-	<label>
+	<div class="form-item">
+		<label>
 		Name: <br>
 		<select name="pokemon[name]">
 			<% @pokemons.each do |pokemon| %>
 				<option value="<%= pokemon %>"><%= pokemon.upcase %></option>
 			<% end %>
 		</select>
-	</label>
+		</label>
+	</div>
 	<br>
+	<div class="form-item">
+		<label>
 		Pokemon TYPE:
 		<div class="type-wrapper">
 			<% @types.each do |type| %>
@@ -18,9 +22,13 @@
 				</label>
 			<% end %>
 		</div>
-	<label>
+		</label>
+	</div>
+	<div class="form-item">
+		<label>
 		CP: <input type="text" name="pokemon[cp]">
-	</label>
-		<input type="submit" value="Add Pokemon">
+		</label>
+	</div>
+		<input class="remove" type="submit" value="Add Pokemon">
 	</form>
 </div>

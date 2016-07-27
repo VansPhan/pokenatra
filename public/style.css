@@ -38,6 +38,10 @@ nav {
     font-size: 200%;
 }
 
+.form-item {
+    margin: 30px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -80,14 +84,6 @@ input[type=text] {
 }
 
 /*TYPES*/
-
-label {
-    cursor: pointer;
-}
-
-input:checked + label {
-    background-color: black;
-}
 
 .type-wrapper {
     width: 600px;
